@@ -3,7 +3,12 @@ const MongoClient = mongodb.MongoClient;
 
 let _db;
 const MongoConnect=(callback)=>{
-    MongoClient.connect('mongodb+srv://admin:Humidity123@cluster0-lcmm1.mongodb.net/test?retryWrites=true')
+    mongoose.connect('mongodb+srv://admin@cluster0-lcmm1.mongodb.net/shop?retryWrites=true', {
+    auth: {
+      user: 'admin',
+      password: 'Humidity123'
+    }
+    })
     .then(client =>{
         console.log('Connected');
         _db = client.db();
