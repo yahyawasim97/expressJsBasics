@@ -191,6 +191,10 @@ form {
 
 .card__image img {
   width: 100%;
+  display: block;
+  max-height: 30vh;
+  object-fit: cover;
+  margin: auto;
 }
 
 .card__actions {
